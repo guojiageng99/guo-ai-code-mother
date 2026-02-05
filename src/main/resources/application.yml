@@ -5,13 +5,24 @@ server:
   port: 8123
   servlet:
     context-path: /api
-# springdoc-openapi
-springdoc:
-  group-configs:
-    - group: 'default'
-      packages-to-scan: com.guo.guoaicodemother.controller
 # knife4j
 knife4j:
   enable: true
   setting:
     language: zh_cn
+
+
+springdoc:
+  # 接口文档基础路径，匹配你的context-path
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  # Swagger UI配置
+  swagger-ui:
+    path: /swagger-ui.html
+    # 开启UI界面
+    enabled: true
+  # 分组配置（保留你原有的）
+  group-configs:
+    - group: 'default'
+      packages-to-scan: com.guo.guoaicodemother.controller
