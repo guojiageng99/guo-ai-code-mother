@@ -1,6 +1,7 @@
 y
 y.pub
 application-local.yml
+/tmp
 
 HELP.md
 target/
